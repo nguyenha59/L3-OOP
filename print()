@@ -1,0 +1,14 @@
+public void PrintCart(){
+        System.out.println("***********************CART***********************");
+        System.out.println("Ordered Items:\n");
+        float cost = 0;
+        for(DigitalVideoDisc disc : itemsOrdered){
+            try {
+                System.out.println(disc.toString());
+                cost += disc.getCost();
+            } catch (NullPointerException e) {
+            }
+        }
+        System.out.println("Total cost: " + cost);
+        System.out.println("***************************************************");
+    }
